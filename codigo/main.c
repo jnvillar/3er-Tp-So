@@ -10,7 +10,6 @@
 
 /* Variables globales. */
 int np, rank; /* Variables de MPI. */
-int DPI = 2;
 
 /* Procesa el alta y baja de procesos.
  * Si devuelve 1 significa que debe terminar.
@@ -65,9 +64,8 @@ void elector(t_pid pid)
 	 printf("Comienza la elección de líder en proceso %u.\n", pid);
 	 /* Etapa 2: corro la elección de líder. */
 	 
-	 if ((random() % DENOMINADOR_PROB_INICIO)==0)
+	 if (pid == 4 || pid == 3)
 		{
-			DPI +=20000;
 		 printf("Poniendo a circular una elección en proceso %u.\n",
 			pid);
 		 iniciar_eleccion(pid, es_ultimo);
