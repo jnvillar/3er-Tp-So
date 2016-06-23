@@ -64,7 +64,7 @@ void elector(t_pid pid)
 	 printf("Comienza la elección de líder en proceso %u.\n", pid);
 	 /* Etapa 2: corro la elección de líder. */
 	 
-	 if (pid ==3 || pid==4)
+	 if ((random() % DENOMINADOR_PROB_INICIO)==0)
 		{
 		 printf("Poniendo a circular una elección en proceso %u.\n",
 			pid);

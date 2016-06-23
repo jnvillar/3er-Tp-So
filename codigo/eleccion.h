@@ -21,5 +21,11 @@ void eleccion_lider(t_pid pid, int es_ultimo, unsigned int timeout);
  */
 void iniciar_eleccion(t_pid pid, int es_ultimo);
 
+
+#define	FALSE 0
+#define	TRUE 1
+#define	TAG_ACK 1
+#define	TAG_MSG 0
+
 #endif	/* ELECCION_H */
  
